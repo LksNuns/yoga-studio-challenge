@@ -33,6 +33,13 @@ To get started with running the project locally, follow these steps:
 
    The server will be running at `http://localhost:3000`.
 
+## GitHub Workflow for RSpec
+
+This project includes a GitHub Actions workflow that runs RSpec tests for each pull request and push to the master branch. The workflow is defined in the `.github/workflows/rspec.yml` file. It ensures that all tests pass before any changes are merged into the master branch, maintaining the integrity of the codebase.
+
+To view or modify the workflow, navigate to the `.github/workflows/rspec.yml` file in the repository.
+
+
 ## Demo
 ![Peek 2024-10-10 12-51](https://github.com/user-attachments/assets/ed6cc92e-864f-4e29-b441-8530b67e4732)
 
