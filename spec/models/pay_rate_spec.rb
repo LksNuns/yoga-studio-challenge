@@ -11,4 +11,8 @@ RSpec.describe PayRate, type: :model do
     it { is_expected.to validate_presence_of(:rate_name) }
     it { is_expected.to validate_numericality_of(:base_rate_per_client).is_greater_than(0) }
   end
+
+  describe 'nested attributes' do
+    it { should accept_nested_attributes_for(:pay_rate_bonus).allow_destroy(true) }
+  end
 end

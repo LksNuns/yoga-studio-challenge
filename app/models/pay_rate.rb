@@ -16,6 +16,5 @@ class PayRate < ApplicationRecord
 
   # TODO: we can remove this and do the entire create process as a command
   # Since there is no business logic to create it yet, we leave it here for now
-  # We also don't need to allow_destroy for now.
-  accepts_nested_attributes_for :pay_rate_bonus
+  accepts_nested_attributes_for :pay_rate_bonus, allow_destroy: true
 end
