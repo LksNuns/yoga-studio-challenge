@@ -5,7 +5,7 @@ module PayRates
     def show
       pay_rate = PayRate.find(params[:pay_rate_id])
 
-      command = Commands::PayRates::CalculatePayment.new(pay_rate, @client_count)
+      command = ::Commands::PayRates::CalculatePayment.new(pay_rate, @client_count)
       payment = command.execute
 
       render json: { payment: }, status: :ok
