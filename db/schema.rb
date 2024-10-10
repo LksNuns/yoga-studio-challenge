@@ -10,12 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.2].define(version: 2024_10_10_123843) do
+ActiveRecord::Schema[7.2].define(version: 2024_10_10_144845) do
   create_table "pay_rate_bonuses", force: :cascade do |t|
     t.integer "pay_rate_id"
     t.decimal "rate_per_client", precision: 10, scale: 2, null: false
-    t.integer "min_client_count", null: false
-    t.integer "max_client_count", null: false
+    t.integer "min_client_count"
+    t.integer "max_client_count"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["pay_rate_id"], name: "index_pay_rate_bonuses_on_pay_rate_id"
