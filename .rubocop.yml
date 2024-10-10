@@ -15,3 +15,6 @@ Style/StringLiterals:
     - "lib/**/*"
     - "test/**/*"
     - "Gemfile"
+
+Layout/SpaceInsideArrayLiteralBrackets:
+  EnforcedStyle: no_space

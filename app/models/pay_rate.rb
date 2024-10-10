@@ -13,4 +13,9 @@ class PayRate < ApplicationRecord
   validates :base_rate_per_client, numericality: { greater_than: 0 }
 
   has_one :pay_rate_bonus, dependent: :destroy
+
+  # TODO: we can remove this and do the entire create process as a command
+  # Since there is no business logic to create it yet, we leave it here for now
+  # We also don't need to allow_destroy for now.
+  accepts_nested_attributes_for :pay_rate_bonus
 end
