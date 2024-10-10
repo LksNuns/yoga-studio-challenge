@@ -52,4 +52,3 @@ RSpec.describe 'PATCH /pay_rates/:id', type: :request do
     end
   end
 end
-

@@ -11,7 +11,7 @@ RSpec.describe 'GET /pay_rates/:pay_rate_id/payments', type: :request do
       request
 
       expect(response).to have_http_status(:ok)
-      expect(JSON.parse(response.body)).to eq({ 'payment' => '15.0' })
+      expect(JSON.parse(response.body)).to eq({ 'payment' => 15.0 })
     end
   end
 
