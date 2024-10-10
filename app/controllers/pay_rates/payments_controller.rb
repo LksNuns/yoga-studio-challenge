@@ -8,7 +8,7 @@ module PayRates
       command = ::Commands::PayRates::CalculatePayment.new(pay_rate, @client_count)
       payment = command.execute
 
-      render json: { payment: }, status: :ok
+      render json: { payment: payment.to_f }, status: :ok
     end
 
     private
