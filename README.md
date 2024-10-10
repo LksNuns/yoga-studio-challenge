@@ -33,6 +33,9 @@ To get started with running the project locally, follow these steps:
 
    The server will be running at `http://localhost:3000`.
 
+## Demo
+![Peek 2024-10-10 12-51](https://github.com/user-attachments/assets/ed6cc92e-864f-4e29-b441-8530b67e4732)
+
 ## Using the API
 
 The API provides the following routes:
