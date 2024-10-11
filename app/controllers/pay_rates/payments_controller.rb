@@ -1,6 +1,6 @@
 module PayRates
   class PaymentsController < ApplicationController
-    before_action :validate_client_count, only: :show
+    before_action :validate_params, only: :show
 
     def show
       pay_rate = PayRate.find(params[:pay_rate_id])
@@ -13,15 +13,15 @@ module PayRates
 
     private
 
-    def validate_client_count
-      if params[:clients].blank? || !valid_client_count?(params[:clients])
+    def validate_params
+      if params[:clients].blank? || !integer?(params[:clients])
         render json: { error: '"clients" parameter must be a valid integer' }, status: :unprocessable_entity
       else
         @client_count = params[:clients].to_i
       end
     end
 
-    def valid_client_count?(client_count)
+    def integer?(client_count)
       Integer(client_count) rescue false
     end
   end

@@ -4,7 +4,7 @@ RSpec.describe PayRateBonus, type: :model do
   subject { build(:pay_rate_bonus) }
 
   describe 'associations' do
-    it { should belong_to(:pay_rate).optional }
+    it { is_expected.to belong_to(:pay_rate).optional }
   end
 
   describe 'validations' do

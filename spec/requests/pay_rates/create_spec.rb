@@ -9,11 +9,8 @@ RSpec.describe 'POST /pay_rates', type: :request do
   it 'creates a new pay rate without bonus' do
     expect { request }.to change(PayRate, :count).by(1)
 
-    # TODO: We can create a matcher for this kind of response
-    expected_response = PayRateSerializer.new(PayRate.last).as_json
-
     expect(response).to have_http_status(:created)
-    expect(response.body).to eq(expected_response.to_json)
+    expect(response.body).to match_response(PayRate.last)
   end
 
   context 'with nested attributes' do
@@ -24,10 +21,8 @@ RSpec.describe 'POST /pay_rates', type: :request do
     it 'creates a new pay rate with bonus' do
       expect { request }.to change(PayRate, :count).by(1)
 
-      expected_response = PayRateSerializer.new(PayRate.last).as_json
-
       expect(response).to have_http_status(:created)
-      expect(response.body).to eq(expected_response.to_json)
+      expect(response.body).to match_response(PayRate.last)
     end
   end
 

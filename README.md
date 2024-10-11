@@ -33,6 +33,24 @@ To get started with running the project locally, follow these steps:
 
    The server will be running at `http://localhost:3000`.
 
+## Custom Matchers for RSpec
+
+A custom RSpec matcher has been created to facilitate JSON response comparisons in this project.
+
+### Usage
+
+To use the custom matcher, you can do the following in your specs:
+
+```ruby
+expect(actual_response).to match_response(expected_response)
+```
+
+If you need to specify a serializer, you can do so like this:
+
+```ruby
+expect(actual_response).to match_response(expected_response).with_serializer(MySerializer)
+```
+
 ## GitHub Workflow for RSpec
 
 This project includes a GitHub Actions workflow that runs RSpec tests for each pull request and push to the master branch. The workflow is defined in the `.github/workflows/rspec.yml` file. It ensures that all tests pass before any changes are merged into the master branch, maintaining the integrity of the codebase.
