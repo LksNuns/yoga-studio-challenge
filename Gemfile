@@ -52,7 +52,7 @@ end
 group :development do
   gem 'annotate', '~> 3.2'
 
-  gem 'guard', '~> 2.18', '>= 2.18.1'
+  gem 'guard', '~> 2.19'
   gem 'guard-rspec', require: false
 end
 
