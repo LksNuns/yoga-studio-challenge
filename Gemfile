@@ -58,5 +58,5 @@ end
 
 group :test do
   gem 'shoulda-matchers', '~> 6.4'
-  gem 'super_diff', '~> 0.13.0'
+  gem 'super_diff', '~> 0.15.0'
 end
